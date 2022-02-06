@@ -3,5 +3,24 @@
 pragma solidity >=0.4.17 <0.9.0;
 
 contract TodoList {
-    uint256 public taskCount = 0;
+  uint256 public taskCount = 0;
+
+  struct Task {
+    uint id;
+    string content;
+    bool completed;
+  }
+
+  mapping(uint => Task) public tasks;
+
+  constructor() public {
+    createTask("life is good");
+  }
+
+  function createTask(string memory _content) public {
+    taskCount++;
+    tasks[taskCount] = Task(taskCount, _content, false);
+  }
+
+
 }
