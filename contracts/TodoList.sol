@@ -13,7 +13,7 @@ contract TodoList {
 
   mapping(uint => Task) public tasks;
 
-  constructor() {
+  constructor() public {
     createTask("life is good");
   }
 
