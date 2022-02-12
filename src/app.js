@@ -16,7 +16,7 @@ App = {
       App.web3Provider = web3.currentProvider;
       web3 = new Web3(web3.currentProvider);
     } else {
-      window.alert("Please connect to Metamask.");
+      window.alert("Please connect to Metamask");
     }
     // Modern dapp browsers...
     if (window.ethereum) {
@@ -44,7 +44,7 @@ App = {
     // Non-dapp browsers...
     else {
       console.log(
-        "Non-Ethereum browser detected. You should consider trying MetaMask!"
+        "This browser doesn't support ethereum. Connect MetaMask"
       );
     }
   },

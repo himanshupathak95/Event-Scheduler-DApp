@@ -25,7 +25,7 @@ contract TodoList {
   );
 
   constructor() public {
-    createTask("life is good");
+    createTask("Your events will appear like this ");
   }
 
   function createTask(string memory _content) public {
