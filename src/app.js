@@ -43,9 +43,7 @@ App = {
     }
     // Non-dapp browsers...
     else {
-      console.log(
-        "This browser doesn't support ethereum. Connect MetaMask"
-      );
+      console.log("This browser doesn't support ethereum. Connect MetaMask");
     }
   },
 
@@ -103,7 +101,7 @@ App = {
         .find("input")
         .prop("name", taskId)
         .prop("checked", taskCompleted)
-        .on('click', App.toggleCompleted);
+        .on("click", App.toggleCompleted);
 
       // Put the task in the correct list
       if (taskCompleted) {
