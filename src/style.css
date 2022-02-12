@@ -4,10 +4,7 @@ body {
   /* text-align: center; */
   font-family: 'Sarabun', sans-serif;
 }
-/* #container-fluid {
-  border: 2px solid gray;
 
-} */
 #h1eventSched {
   text-align: center;
 }
@@ -30,17 +27,8 @@ body {
   margin-top: 100px;
 }
 
-/* form {
-  width: 350px;
-  margin-bottom: 10px;
-} */
-
-  /* ul {
-    margin-bottom: 0px;
-  } */
-
 #completedTaskList .content {
-  margin: 50px;
+  margin: 10px;
   color: grey;
   text-decoration: line-through;
   text-align: left;
@@ -61,10 +49,6 @@ body {
   margin-left: 450px;
 }
 
-/* #checkFresh {
-  float: left;
-  width: 60%;
-} */
 
 
 
