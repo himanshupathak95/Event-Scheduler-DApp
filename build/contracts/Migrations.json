@@ -49,9 +49,9 @@
   "sourceMap": "73:352:0:-;;;97:33;;;-1:-1:-1;;;;;;97:33:0;120:10;97:33;;;73:352;5:2:-1;;;;30:1;27;20:12;5:2;73:352:0;;;;;;;",
   "deployedSourceMap": "73:352:0:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;134:36;;8:9:-1;5:2;;;30:1;27;20:12;5:2;134:36:0;;;;;;;;;;;;;;;;;;;;97:33;;8:9:-1;5:2;;;30:1;27;20:12;5:2;97:33:0;;;;;;;;;;;;;;;;;;;;;;;320:103;;8:9:-1;5:2;;;30:1;27;20:12;5:2;320:103:0;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;320:103:0;;;;;134:36;;;;:::o;97:33::-;;;;;;:::o;320:103::-;232:5;;;;218:10;:19;203:101;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;382:24;:36;320:103::o",
   "source": "// SPDX-License-Identifier: Unlicensed\npragma solidity >=0.4.17 <0.9.0;\n\ncontract Migrations {\n  address public owner = msg.sender;\n  uint public last_completed_migration;\n\n  modifier restricted() {\n    require(\n      msg.sender == owner,\n      \"This function is restricted to the contract's owner\"\n    );\n    _;\n  }\n\n  function setCompleted(uint completed) public restricted {\n    last_completed_migration = completed;\n  }\n}\n",
-  "sourcePath": "C:/Users/KIIT/Documents/Projects/eth-todo-list/contracts/Migrations.sol",
+  "sourcePath": "C:/Users/KIIT/Documents/Projects/event-scheduler/contracts/Migrations.sol",
   "ast": {
-    "absolutePath": "/C/Users/KIIT/Documents/Projects/eth-todo-list/contracts/Migrations.sol",
+    "absolutePath": "/C/Users/KIIT/Documents/Projects/event-scheduler/contracts/Migrations.sol",
     "exportedSymbols": {
       "Migrations": [
         32
@@ -455,7 +455,7 @@
     "src": "39:387:0"
   },
   "legacyAST": {
-    "absolutePath": "/C/Users/KIIT/Documents/Projects/eth-todo-list/contracts/Migrations.sol",
+    "absolutePath": "/C/Users/KIIT/Documents/Projects/event-scheduler/contracts/Migrations.sol",
     "exportedSymbols": {
       "Migrations": [
         32
