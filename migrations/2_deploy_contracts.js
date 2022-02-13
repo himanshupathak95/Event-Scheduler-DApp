@@ -1,5 +1,5 @@
-const TodoList = artifacts.require("./TodoList.sol");
+const EventScheduler = artifacts.require("./EventScheduler.sol");
 
 module.exports = function (deployer) {
-  deployer.deploy(TodoList);
+  deployer.deploy(EventScheduler);
 };

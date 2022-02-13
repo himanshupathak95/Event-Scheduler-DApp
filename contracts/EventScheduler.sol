@@ -2,7 +2,7 @@
 // pragma solidity ^0.5.0;
 pragma solidity >=0.4.17 <0.9.0;
 
-contract TodoList {
+contract EventScheduler {
   uint256 public taskCount = 0;
 
   struct Task {
@@ -25,7 +25,7 @@ contract TodoList {
   );
 
   constructor() public {
-    createTask("life is good");
+    createTask("Your events will appear like this ");
   }
 
   function createTask(string memory _content) public {

@@ -16,7 +16,7 @@ App = {
       App.web3Provider = web3.currentProvider;
       web3 = new Web3(web3.currentProvider);
     } else {
-      window.alert("Please connect to Metamask.");
+      window.alert("Please connect to Metamask");
     }
     // Modern dapp browsers...
     if (window.ethereum) {
@@ -43,9 +43,7 @@ App = {
     }
     // Non-dapp browsers...
     else {
-      console.log(
-        "Non-Ethereum browser detected. You should consider trying MetaMask!"
-      );
+      console.log("This browser doesn't support ethereum. Connect MetaMask");
     }
   },
 
@@ -56,12 +54,12 @@ App = {
 
   loadContract: async () => {
     // Create a JavaScript version of the smart contract
-    const todoList = await $.getJSON("TodoList.json");
-    App.contracts.TodoList = TruffleContract(todoList);
-    App.contracts.TodoList.setProvider(App.web3Provider);
+    const eventScheduler = await $.getJSON("EventScheduler.json");
+    App.contracts.EventScheduler = TruffleContract(eventScheduler);
+    App.contracts.EventScheduler.setProvider(App.web3Provider);
 
     // Hydrate the smart contract with values from the blockchain
-    App.todoList = await App.contracts.TodoList.deployed();
+    App.eventScheduler = await App.contracts.EventScheduler.deployed();
   },
 
   render: async () => {
@@ -85,13 +83,13 @@ App = {
 
   renderTasks: async () => {
     // Load the total task count from the blockchain
-    const taskCount = await App.todoList.taskCount();
+    const taskCount = await App.eventScheduler.taskCount();
     const $taskTemplate = $(".taskTemplate");
 
     // Render out each task with a new task template
     for (var i = 1; i <= taskCount; i++) {
       // Fetch the task data from the blockchain
-      const task = await App.todoList.tasks(i);
+      const task = await App.eventScheduler.tasks(i);
       const taskId = task[0].toNumber();
       const taskContent = task[1];
       const taskCompleted = task[2];
@@ -103,7 +101,7 @@ App = {
         .find("input")
         .prop("name", taskId)
         .prop("checked", taskCompleted)
-        .on('click', App.toggleCompleted);
+        .on("click", App.toggleCompleted);
 
       // Put the task in the correct list
       if (taskCompleted) {
@@ -120,14 +118,14 @@ App = {
   createTask: async () => {
     App.setLoading(true);
     const content = $("#newTask").val();
-    await App.todoList.createTask(content);
+    await App.eventScheduler.createTask(content);
     window.location.reload();
   },
 
   toggleCompleted: async (e) => {
     App.setLoading(true);
     const taskId = e.target.name;
-    await App.todoList.toggleCompleted(taskId);
+    await App.eventScheduler.toggleCompleted(taskId);
     window.location.reload();
   },
 
