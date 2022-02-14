@@ -14,3 +14,7 @@ This is a simple implementation and potrayal of its capabilities.
 # Objective
 The goal is to display the power of decentralization by blockchain technology through small scale implementation.
 
+# Getting Started 
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. Follow along and Please check the versions of various packages for better flow.
+
+## Installing Dependencies
