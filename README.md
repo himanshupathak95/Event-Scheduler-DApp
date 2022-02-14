@@ -73,7 +73,7 @@ truffle migrate
 
 ## Testing  
 
-Once your Smart Contract is successfully deployed, use `truffle migrate --reset` to reset the copy of your contract on the blockchain if you wish to.
+Once your Smart Contract is successfully deployed, use  `truffle migrate --reset`  to reset the copy of your contract on the blockchain if you wish to.
 After deployment, we shall be testing the contracts.   
 Here we have 3 tests for : 
 * creating events
