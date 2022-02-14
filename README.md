@@ -29,10 +29,21 @@ A step by step series of examples that tell you have to get a development env ru
 
 
 **Clone this repository on your local machine :**  
-`git clone https://github.com/himanshupathak95/Event-Scheduler-DApp.git`
+
+```bash
+git clone https://github.com/himanshupathak95/Event-Scheduler-DApp.git
+```
+
 
 **Install the dependencies :**  
-`npm install`
+
+```bash 
+npm install
+```  
+
+
+
+
 
 
 
