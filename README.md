@@ -1,5 +1,5 @@
 # Event-Scheduler-DApp
-Event Scheduling Decentralized Application 
+**Event Scheduling Decentralized Application**
 * using Truffle Suite 
 * powered by Ethereum Smart Contracts
 * Inspired by Microsoft To Do
