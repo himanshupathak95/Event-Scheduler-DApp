@@ -105,4 +105,4 @@ npm run dev
 
 # Author  
 
-**Himanshu Pathak**
+[Himanshu Pathak](https://github.com/himanshupathak95)
