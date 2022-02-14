@@ -15,6 +15,18 @@ This is a simple implementation and potrayal of its capabilities.
 The goal is to display the power of decentralization by blockchain technology through small scale implementation.
 
 # Getting Started 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. Follow along and Please check the versions of various packages for better flow.
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. Follow along and Please check the required versions of various packages and install the prerequisites : 
 
-## Installing Dependencies
+* Solidity : ^0.4.17
+* Truffle : ^5.0.2
+* web3: ^0.20.6
+* ganache-cli : ^6.12.2 
+* Metamask Wallet extension in your Browser
+
+## Installing 
+A step by step series of examples that tell you have to get a development env running
+
+**Clone this repository : **
+``` https://github.com/himanshupathak95/Event-Scheduler-DApp.git ```
+
+
