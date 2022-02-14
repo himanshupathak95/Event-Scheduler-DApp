@@ -78,12 +78,40 @@ After deployment, we shall be testing the contracts.
 Here we have 3 tests for : 
 * creating events
 * deploying events
-* completing events
+* completing events  
+
 **(You can also use the Addtional Test there for testing the listing of events)**
 
 ```bash
 truffle test
 ```
+
+
+## Launch the DApp
+
+In a separate terminal window, **launch the DApp** :
+
+```bash
+npm run dev
+```  
+
+
+## Built With 
+
+* [Ethereum](https://ethereum.org/en/) : Ethereum is a decentralized platform that runs smart contracts
+* [Truffle Suite](https://trufflesuite.com/) : Truffle is the most popular development framework for Ethereum with a mission to make your life a whole lot better  
+
+
+# Author  
+
+**Himanshu Pathak**
+
+
+
+
+
+
+
 
 
 
