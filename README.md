@@ -26,7 +26,7 @@ These instructions will get you a copy of the project up and running on your loc
 ## Installing 
 A step by step series of examples that tell you have to get a development env running
 
-**Clone this repository : **
+** Clone this repository : **
 ``` https://github.com/himanshupathak95/Event-Scheduler-DApp.git ```
 
 
