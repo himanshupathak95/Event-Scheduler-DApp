@@ -1,2 +1,2 @@
 # Event-Scheduler-DApp
-Event Scheduling using Decentralized Application
+Event Scheduling Decentralized Application using Truffle suite powered by Ethereum
