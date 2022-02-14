@@ -42,6 +42,38 @@ npm install
 ```  
 
 
+**Install Solidity Compiler :**
+
+```bash
+npm install solc@latest
+```
+
+
+**Launch Ganache using your MNEMONIC :**
+
+```bash
+ganache-cli -m "involve small start enjoy weird trust ethics matrix collect zoo bench east"
+```
+
+
+**Now, In a seperate Teminal window, compile the Truffle Smart Contract :**
+
+```bash
+truffle compile
+```
+
+
+**When the compilation finishes successfully, the contract is ready for the deploument.**
+**Deploy the Truffle Smart Contract :**
+
+```bash
+truffle migrate
+```
+
+##Testing
+
+
+
 
 
 
