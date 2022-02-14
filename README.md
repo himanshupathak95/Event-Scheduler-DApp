@@ -101,6 +101,7 @@ npm run dev
 
 * [Ethereum](https://ethereum.org/en/) : Ethereum is a decentralized platform that runs smart contracts
 * [Truffle Suite](https://trufflesuite.com/) : Truffle is the most popular development framework for Ethereum with a mission to make your life a whole lot better  
+* [MetaMask](https://metamask.io/) : An amazing crypto wallet & gateway to blockchain apps
 
 
 # Author  
