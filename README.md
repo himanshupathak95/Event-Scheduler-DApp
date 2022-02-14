@@ -25,10 +25,10 @@ These instructions will get you a copy of the project up and running on your loc
 * Metamask Wallet extension in your Browser
 
 ## Installing 
-A step by step series of examples that tell you have to get a development env running
+A step by step series of examples that tell you have to get a development env running  
+
 
 **Clone this repository on your local machine :**  
-
 `git clone https://github.com/himanshupathak95/Event-Scheduler-DApp.git`
 
 **Install the dependencies :**  
