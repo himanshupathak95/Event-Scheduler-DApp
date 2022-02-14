@@ -32,7 +32,7 @@ A step by step series of examples that tell you have to get a development env ru
 `git clone https://github.com/himanshupathak95/Event-Scheduler-DApp.git`
 
 **Install the dependencies :**  
-`npm install
+`npm install`
 
 
 
