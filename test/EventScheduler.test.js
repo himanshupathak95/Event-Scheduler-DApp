@@ -16,21 +16,22 @@ contract("EventScheduler", (accounts) => {
     assert.notEqual(address, undefined);
   });
 
-  it("lists tasks", async () => {
-    const taskCount = await this.eventScheduler.taskCount();
-    const task = await this.eventScheduler.tasks(taskCount);
-    assert.equal(task.id.toNumber(), taskCount.toNumber());
-    assert.equal(task.content, "Your events will appear like this ");
-    assert.equal(task.completed, false);
-    assert.equal(taskCount.toNumber(), 1);
-  });
+  // test of listing of tasks - enabled when default task is enabled
+  // it("lists tasks", async () => {
+  //   const taskCount = await this.eventScheduler.taskCount();
+  //   const task = await this.eventScheduler.tasks(taskCount);
+  //   assert.equal(task.id.toNumber(), taskCount.toNumber());
+  //   assert.equal(task.content, "Your events will appear like this ");
+  //   assert.equal(task.completed, false);
+  //   assert.equal(taskCount.toNumber(), 1);
+  // });
 
   it("creates tasks", async () => {
     const result = await this.eventScheduler.createTask("A new task");
     const taskCount = await this.eventScheduler.taskCount();
-    assert.equal(taskCount, 2);
+    assert.equal(taskCount, 1);
     const event = result.logs[0].args;
-    assert.equal(event.id.toNumber(), 2);
+    assert.equal(event.id.toNumber(), 1);
     assert.equal(event.content, "A new task");
     assert.equal(event.completed, false);
   });

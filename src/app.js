@@ -1,18 +1,19 @@
 App = {
-  loading: false,
-  contracts: {},
+  loading: false, // So that it can be changed later
+  contracts: {}, // Storing the contracts
 
   load: async () => {
-    await App.loadWeb3();
+    await App.loadWeb3(); // Loading web3 library to connect to the blockchain
     await App.loadAccount();
     await App.loadContract();
     await App.render();
-    web3.eth.defaultAccount = web3.eth.accounts[0];
+    web3.eth.defaultAccount = web3.eth.accounts[0]; // Default account as the first account
   },
 
-  // https://medium.com/metamask/https-medium-com-metamask-breaking-change-injecting-web3-7722797916a8
+  // this is metamask specified configuration
   loadWeb3: async () => {
     if (typeof web3 !== "undefined") {
+      // Talking to blockchain with means of Web3
       App.web3Provider = web3.currentProvider;
       web3 = new Web3(web3.currentProvider);
     } else {
@@ -48,97 +49,90 @@ App = {
   },
 
   loadAccount: async () => {
-    // Set the current blockchain account
+    // Setting the current blockchain account
     App.account = web3.eth.accounts[0];
   },
 
   loadContract: async () => {
-    // Create a JavaScript version of the smart contract
+    // Creating a JavaScript version of the smart contract
     const eventScheduler = await $.getJSON("EventScheduler.json");
-    App.contracts.EventScheduler = TruffleContract(eventScheduler);
-    App.contracts.EventScheduler.setProvider(App.web3Provider);
-
-    // Hydrate the smart contract with values from the blockchain
+    App.contracts.EventScheduler = TruffleContract(eventScheduler); // Creating Truffle contract
+    App.contracts.EventScheduler.setProvider(App.web3Provider); // Now able to call functions of  the contact
+    // Setting the contract with values from the blockchain
     App.eventScheduler = await App.contracts.EventScheduler.deployed();
   },
 
   render: async () => {
-    // Prevent double render
+    // Preventing multiple renders
     if (App.loading) {
       return;
     }
-
-    // Update app loading state
+    // Updating app loading state to take changes
     App.setLoading(true);
-
-    // Render Account
+    // Rendering Account
     $("#account").html(App.account);
-
-    // Render Tasks
+    // Rendering the Tasks
     await App.renderTasks();
-
-    // Update loading state
+    // Updating loading state back to false
     App.setLoading(false);
   },
 
   renderTasks: async () => {
-    // Load the total task count from the blockchain
+    // Loading the total task count from the blockchain
     const taskCount = await App.eventScheduler.taskCount();
-    const $taskTemplate = $(".taskTemplate");
-
-    // Render out each task with a new task template
+    const $taskTemplate = $(".taskTemplate"); // Fetching task template
+    // Rendering out each task with a new task template
     for (var i = 1; i <= taskCount; i++) {
-      // Fetch the task data from the blockchain
+      // Fetching the task data from the blockchain
       const task = await App.eventScheduler.tasks(i);
-      const taskId = task[0].toNumber();
-      const taskContent = task[1];
-      const taskCompleted = task[2];
+      const taskId = task[0].toNumber(); // is the id
+      const taskContent = task[1]; // is the content
+      const taskCompleted = task[2]; // is the completed
 
-      // Create the html for the task
+      // Creating the html for the task
       const $newTaskTemplate = $taskTemplate.clone();
       $newTaskTemplate.find(".content").html(taskContent);
-      $newTaskTemplate
+      $newTaskTemplate // Assigning the input to the html
         .find("input")
         .prop("name", taskId)
         .prop("checked", taskCompleted)
         .on("click", App.toggleCompleted);
 
-      // Put the task in the correct list
+      // Putting the task in its respective list
       if (taskCompleted) {
         $("#completedTaskList").append($newTaskTemplate);
       } else {
         $("#taskList").append($newTaskTemplate);
       }
-
-      // Show the task
+      // Finally, showing the task
       $newTaskTemplate.show();
     }
   },
 
   createTask: async () => {
     App.setLoading(true);
-    const content = $("#newTask").val();
-    await App.eventScheduler.createTask(content);
-    window.location.reload();
+    const content = $("#newTask").val(); // Fetching content of the task created
+    await App.eventScheduler.createTask(content); // Passing the fetched content to our contract
+    window.location.reload(); // Refreshing the page 
   },
 
-  toggleCompleted: async (e) => {
+  toggleCompleted: async (e) => { // This is an onClick event
     App.setLoading(true);
-    const taskId = e.target.name;
-    await App.eventScheduler.toggleCompleted(taskId);
-    window.location.reload();
+    const taskId = e.target.name; // Taking name (taskid) of the checkbox from the event
+    await App.eventScheduler.toggleCompleted(taskId); // Calling our contract to toggle this 
+    window.location.reload(); // Refreshing the page
   },
 
   setLoading: (boolean) => {
     App.loading = boolean;
-    const loader = $("#loader");
-    const content = $("#content");
+    const loader = $("#loader"); // To show the loader on the page while loading
+    const content = $("#content"); // To show the content on the page after loading
     if (boolean) {
       loader.show();
-      content.hide();
+      content.hide(); // Hiding content while loading
     } else {
-      loader.hide();
-      content.show();
+      loader.hide(); // Hiding the loader after loading
+      content.show(); // Showing the content after loading
     }
   },
 };
