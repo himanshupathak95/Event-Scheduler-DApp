@@ -1,6 +1,8 @@
 # Event-Scheduler-DApp
-Event Scheduling Decentralized Application using Truffle suite powered by Ethereum Smart Contracts
-( Inspired by Microsoft To Do )
+Event Scheduling Decentralized Application 
+* using Truffle suite 
+* powered by Ethereum Smart Contracts
+* ( Inspired by Microsoft To Do )
 
 # About
 Event Scheduler DApp, as the name suggests is an application to schedule, organize and plan your events, without them being centralized. Decentralization as we know, is the next step of technological advancement involving tons of advantages and improved efficiency.
