@@ -1,5 +1,6 @@
 
-# Event-Scheduler-DApp
+# Event-Scheduler-DApp  
+
 **Event Scheduling Decentralized Application**
 * using Truffle Suite 
 * powered by Ethereum Smart Contracts
@@ -9,11 +10,11 @@
 
 # About
 Event Scheduler DApp, as the name suggests is an application to schedule, organize and plan your events without them being centralized. 
-Decentralization as we know, is the next step of technological advancement involving tons of advantages and improved efficiency.
-This is a simple implementation and potrayal of its capabilities.
+Decentralization as we know is the next step of technological advancement involving tons of advantages and improved efficiency.
+This is a simple implementation and portrayal of its capabilities.
 
 # Objective
-The goal is to display the power of decentralization by blockchain technology through small scale implementation.
+The goal is to display the power of decentralization by blockchain technology and also educate the budding developers through a small scale implementation. 
 
 # Getting Started 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. Follow along and Please check the required versions of various packages and install the prerequisites : 
@@ -25,7 +26,7 @@ These instructions will get you a copy of the project up and running on your loc
 * Metamask Wallet extension in your Browser
 
 ## Installing 
-A step by step series of examples that tell you have to get a development env running  
+A step by step series of commands guiding you to get the development env running  
 
 
 **Clone this repository on your local machine :**  
@@ -80,7 +81,7 @@ Here we have 3 tests for :
 * deploying events
 * completing events  
 
-**(You can also use the Addtional Test there for testing the listing of events)**
+**(Optional - You can also use the Addtional Test there for testing the listing of events)**
 
 ```bash
 truffle test
@@ -105,22 +106,3 @@ npm run dev
 # Author  
 
 **Himanshu Pathak**
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
