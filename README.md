@@ -9,7 +9,7 @@
 > The Application is MIT Licensed
 
 # About
-Event Scheduler DApp, as the name suggests is an application to schedule, organize and plan your events without them being centralized. 
+Event Scheduler DApp, as the name suggests is an application to schedule, organize and plan your events without them being centralized. You can add your events and initially they will be marked as 'Incomplete event' but when you check the box, they will be marked as 'Completed event'. Completed events can again be marked as 'Incomplete' by unchecking the box, adding them back in the 'Incomplete events' list. You get a lot of flexibility in this regard.
 Decentralization as we know is the next step of technological advancement involving tons of advantages and improved efficiency.
 This is a simple implementation and portrayal of its capabilities.
 
@@ -64,7 +64,7 @@ truffle compile
 ```
 
 
-**When the compilation finishes successfully, the contract is ready for the deploument.**
+**When the compilation finishes successfully, the contract is ready for the deployment.**
 **Deploy the Truffle Smart Contract :**
 
 ```bash
@@ -74,14 +74,14 @@ truffle migrate
 
 ## Testing  
 
-Once your Smart Contract is successfully deployed, use  `truffle migrate --reset`  to reset the copy of your contract on the blockchain if you wish to.
+Once your Smart Contract is successfully deployed, use   `truffle migrate --reset`   to reset the copy of your contract on the blockchain if you wish to do so.
 After deployment, we shall be testing the contracts.   
 Here we have 3 tests for : 
-* creating events
-* deploying events
-* completing events  
+* creation of events
+* deployment of events
+* completion of events  
 
-**(Optional - You can also use the Addtional Test there for testing the listing of events)**
+**(Optional - You can also use the Addtional Test for testing the listing of events)**
 
 ```bash
 truffle test
